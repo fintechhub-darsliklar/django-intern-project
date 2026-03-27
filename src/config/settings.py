@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'import_export',
 
     'apps.card',
+    'apps.transfer',
 ]
 
 MIDDLEWARE = [
