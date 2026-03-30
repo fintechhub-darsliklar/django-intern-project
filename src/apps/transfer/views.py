@@ -95,9 +95,21 @@ def transfer_create(ext_id, sender_card_number, sender_card_expiry,
     return Success(result) 
 
 
+@method
+def test_uchun():
+
+
+    natija = {
+        "message": "ok"
+    }
+
+    return Success(natija)
+
+
 @csrf_exempt
 def json_rpc_view(request):
     request_data = request.body.decode("utf-8")
     response = dispatch(request_data)
+    print(response)
     response = json.loads(response)
     return JsonResponse(response, safe=False)
